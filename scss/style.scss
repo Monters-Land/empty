@@ -45,12 +45,16 @@ body{
     li .box{
      height:300px;;
      width: 400px;
+     text-align: center;
      overflow: hidden;
+     display: flex;
+     justify-content: center;;
+     align-items: center;
      img{
+       // object-fit: contain
        width: 100%;
      }
      border-radius: 15px;
-     background-color: #212121;
      margin-bottom: 2em;
    }
   }

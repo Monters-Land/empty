@@ -45,9 +45,12 @@ body ::-webkit-scrollbar-corner {
 .memes .elements li .box {
   height: 300px;
   width: 400px;
+  text-align: center;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
-  background-color: #212121;
   margin-bottom: 2em;
 }
 .memes .elements li .box img {
