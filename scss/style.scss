@@ -1,0 +1,61 @@
+body{
+::-webkit-scrollbar {
+  width: 17px;
+  height: 17px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  border: 0px none #ffffff;
+  background: #666666;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+}
+.memes{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;;
+  margin-top: 8em;
+  .elements{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    list-style: none;
+    overflow-x: scroll;
+    align-items: center;
+    li.content{
+      text-align: left;
+      margin: 0 2em;
+      padding-bottom: 2em;
+      button{
+        transition: all ease 500ms;
+      }
+
+    }
+    li .box{
+     height:300px;;
+     width: 400px;
+     overflow: hidden;
+     img{
+       width: 100%;
+     }
+     border-radius: 15px;
+     background-color: #212121;
+     margin-bottom: 2em;
+   }
+  }
+
+  .box:first-child{
+    margin-left: 0;
+  }
+}

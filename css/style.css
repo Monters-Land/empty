@@ -1,0 +1,60 @@
+body ::-webkit-scrollbar {
+  width: 17px;
+  height: 17px;
+}
+body ::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+body ::-webkit-scrollbar-thumb {
+  border: 0px none #ffffff;
+  background: #666666;
+  border-radius: 0px;
+}
+body ::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+body ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.memes {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 8em;
+}
+.memes .elements {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  list-style: none;
+  overflow-x: scroll;
+  align-items: center;
+}
+.memes .elements li.content {
+  text-align: left;
+  margin: 0 2em;
+  padding-bottom: 2em;
+}
+.memes .elements li.content button {
+  transition: all ease 500ms;
+}
+.memes .elements li .box {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #212121;
+  margin-bottom: 2em;
+}
+.memes .elements li .box img {
+  width: 100%;
+}
+.memes .box:first-child {
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
