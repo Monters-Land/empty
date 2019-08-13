@@ -25,8 +25,9 @@ body{
   width: 90%;
   margin: 0 auto;
   overflow: hidden;;
-  margin-top: 8em;
+  margin-top: 2em;
   .elements{
+    padding: 0;
     display: flex;
     width: 100%;
     overflow: hidden;
@@ -57,9 +58,10 @@ body{
      border-radius: 15px;
      margin-bottom: 2em;
    }
+   li:first-child{
+     margin-left: 0 !important;
+   }
   }
 
-  .box:first-child{
-    margin-left: 0;
-  }
+
 }

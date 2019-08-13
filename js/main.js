@@ -1,5 +1,6 @@
 const url = ` https://api.imgflip.com/get_memes`;
 const container = $('.memes .elements');
+
 fetch(url)
 .then(data => data.json())
 .then(json => {
@@ -15,18 +16,33 @@ fetch(url)
     const template = `
     <li class="content">
       <div class="box">
-        <img src="${data[i].url}" alt="">
+        <img onclick="download(this)" src="${data[i].url}" alt="${data[i].id}" >
       </div>
       <div class="info">
         <h5>${data[i].name}</h5>
-        <button type="button" class="btn  btn-outline-success">Download</button>
+        <button  value="${data[i].id}" type="button" class="btn download  btn-outline-success">Download</button>
       </div>
 
     </li>
     `
     $(container).append(template)
-    // console.log(data)
   }
+  function download_img(e){
+    const img = $('.box img');
+    const tr = e.target;
+    const id = $(tr).attr('value');
+    for(i = 0 ; i < img.length; i++){
+      const l= img[i];
+      const alt = $(l).attr('alt');
+      if(alt == id){
+        const link = $(l).attr('src');
+        new jsFileDownloader({url:link})
+      }
+    }
+  }
+  $('.download').click((e)=>{
+    download_img(e)
+  })
   $(container).append(load)
   $('#load').click(()=>loadMore())
   function loadMore(){
@@ -44,18 +60,20 @@ fetch(url)
         const template = `
         <li class="content">
           <div class="box">
-            <img src="${data[i].url}" alt="">
+            <img onclick="download(this)" src="${data[i].url}" alt="${data[i].id}" >
           </div>
           <div class="info">
             <h5>${data[i].name}</h5>
-            <button type="button" class="btn  btn-outline-success">Download</button>
+            <button  value="${data[i].id}" type="button" class="btn download  btn-outline-success">Download</button>
           </div>
 
         </li>
         `
         $(container).append(template)
-        // console.log(data)
       }
-    } , 4000)
+      $('.download').click((e)=>{
+        download_img(e)
+      })
+    } , 1000)
   }
 })
