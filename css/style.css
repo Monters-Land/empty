@@ -43,6 +43,9 @@ body ::-webkit-scrollbar-corner {
 .memes .elements li.content button {
   transition: all ease 500ms;
 }
+.memes .elements li .box:hover img {
+  width: 250px;
+}
 .memes .elements li .box {
   height: 300px;
   width: 400px;
@@ -51,10 +54,12 @@ body ::-webkit-scrollbar-corner {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all ease 500ms;
   border-radius: 15px;
   margin-bottom: 2em;
 }
 .memes .elements li .box img {
+  transition: all ease 500ms;
   width: 100%;
 }
 .memes .elements li:first-child {

@@ -43,6 +43,10 @@ body{
       }
 
     }
+    li .box:hover  img{
+      width: 250px;
+
+    }
     li .box{
      height:300px;;
      width: 400px;
@@ -51,8 +55,10 @@ body{
      display: flex;
      justify-content: center;;
      align-items: center;
+     transition: all ease 500ms;
      img{
        // object-fit: contain
+       transition: all ease 500ms;
        width: 100%;
      }
      border-radius: 15px;
